@@ -1,0 +1,16 @@
+{
+  "email": "otakpanudo@gmail.com",
+  "password": "Abc1234@",
+  "invalidEmail": "otakpanudo",
+  "nonexistentEmail":"oookapanudo@gmail.com",
+  "invalidPassword":"afgb7y@",
+  "emailField": ".rm__input-input",
+  "passwordField": ".rm__input-input",
+  "onboardingForm": ".rm__form",
+  "nextBtn": ".ant-btn",
+  "passwordTxt": "main",
+  "mainPasswordTxt": "h1",
+  "alert": ".ant-message-notice-content",
+  "acctbal": ".rm__dashboard-card_balance",
+  "signOutLink": "span[role='button']"
+}

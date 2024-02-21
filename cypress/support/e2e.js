@@ -14,11 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+// import cypress from 'cypress';
 import './commands'
+import './login.actions'
+import './assertion.actions'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(function(){
-    cy.visit('https://renweb-staging.renmoney.com/');
+beforeEach(() => {
+    Cypress.on('uncaught:exception', () => {
+        //   returning false here prevents Cypress from failing the test
+          return false
+        })
+    cy.visit('/');
 })

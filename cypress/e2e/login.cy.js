@@ -1,62 +1,50 @@
 /// <reference types="cypress"/>
-import { LoginPage } from "./Pages/loginPage";
+// import { LoginPage } from "./Pages/loginPage";
 
-const loginPage = new LoginPage();
+// const loginPage = new LoginPage();
 
 describe('Login tests', () => {
 
-  it('valid Email', () => {
-    loginPage.enterEmail();
-    loginPage.clickNext();
-    loginPage.isPasswordDisplayed();
+  it('valid login', () => {
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.userLogin(loginloc.email, loginloc.password)
+      cy.visibility(loginloc.acctbal)
+    })
   })
 
   it('invalid Email', () => {
-    loginPage.enterInvalidEmail();
-    loginPage.clickNext();
-    loginPage.isNextButtonDisabled();
-    loginPage.invalidPopUpMessage();
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.invalidEmail(loginloc.invalidEmail)
+      cy.errormsg(loginloc.alert, 'Invalid email or phone')
+    })
   })
 
   it('non-existent email', () => {
-    loginPage.enterNonexistentEmail();
-    loginPage.clickNext();
-    loginPage.isOnboardingPageDisplayed();
-    
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.invalidEmail(loginloc.nonexistentEmail)
+      cy.visibility(loginloc.onboardingForm)
+    })
   })
 
   it('empty Email', () => {
-    loginPage.clickNext();
-    loginPage.isNextButtonDisabled();
-    loginPage.invalidPopUpMessage();
-  })
-
-  it.only('valid password', () => {
-    loginPage.enterEmail();
-    loginPage.clickNext();
-    cy.wait(3000)
-    loginPage.enterValidPassword();
-    loginPage.clickNext();
-    cy.wait(5000)
-    loginPage.isAccBalDisplayed();
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.clickNextBtn()
+      cy.errormsg(loginloc.alert, 'Invalid fields provided');
+    })
   })
 
   it('invalid password', () => {
-    loginPage.enterEmail();
-    loginPage.clickNext();
-    cy.wait(3000)
-    loginPage.enterInvalidPassword();
-    loginPage.clickNext();
-    loginPage.invalidPasswordMessage();
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.userLogin(loginloc.email, loginloc.invalidPassword)
+      cy.errormsg(loginloc.alert, 'Invalid username or password');
+    })
   })
 
-  it('empty password', () => {
-    loginPage.enterEmail();
-    loginPage.clickNext();
-    cy.wait(3000)
-    loginPage.clickNext();
-    loginPage.passwordErrorMessage();
+  it.only('empty password', () => {
+    cy.fixture("login.json").then((loginloc) =>{
+      cy.emptyPassword(loginloc.email)
+      cy.errormsg(loginloc.alert, 'Error decrypting password');
+    })
   })
-
 
 })

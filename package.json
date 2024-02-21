@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.14.0"
+    "cypress": "^13.6.5"
   },
   "devDependencies": {
     "@wdio/cli": "^8.31.1",
@@ -23,6 +23,7 @@
     "@wdio/mocha-framework": "^8.31.1",
     "@wdio/spec-reporter": "^8.31.1",
     "cypress-downloadfile": "^1.2.3",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-fill-command": "^1.0.2"
   }
 }

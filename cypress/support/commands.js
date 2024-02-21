@@ -25,3 +25,12 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-file-upload';
 require('cypress-downloadfile/lib/downloadFileCommand')
+
+import 'cypress-fill-command'
+
+// import './commands'
+// Cypress.on('uncaught:exception', (err, runnable) => {
+// //   returning false here prevents Cypress from failing the test
+//   return false
+// })
+
