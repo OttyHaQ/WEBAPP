@@ -9,6 +9,7 @@
     "test": "echo I am Test",
     "cy-chrome-headless": "cypress run --browser chrome --headless",
     "cy-chrome-browser": "cypress run",
+    "login-tests": "cypress run --spec cypress/e2e/login.cy.js --browser chrome --headless",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "keywords": [],
