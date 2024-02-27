@@ -14,7 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import cypress from 'cypress';
+// import cypress from 'cypress';
 import './commands'
 import './login.actions'
 import './assertion.actions'
