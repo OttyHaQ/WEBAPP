@@ -1,0 +1,63 @@
+{
+    "//": "left pane",
+
+    "profile_pic": ".main-nav > article > .rounded-circle",
+    "home_btn":"section > .active",
+    "save_btn": "section > [title='Save']",
+    "loan_btn": "section > [title='Loan']",
+    "pay_btn": ".rm-update",
+    "more_btn":"section > [title='More']",
+    "logout_btn":".logout-box",
+    "logo": "[src='assets/reskins/logos/white-logo-renmoney.svg']",
+
+    "//": "top menu",
+
+    "fav_icon": ".d-md-flex > rm-header-action-buttons > .header > :nth-child(1) > img",
+    "message_icon": ".d-md-flex > rm-header-action-buttons > .header > :nth-child(2) > img",
+    "notification_icon": ".d-md-flex > rm-header-action-buttons > .header > :nth-child(3) > img",
+
+    "//": "account details section",
+
+    "title": ".rm__rectangular--card_top > article > p",
+    "history_btn": "History",
+    "tier": "section.ng-star-inserted > rm-tier-button > .ant-btn",
+    "acct_name": ".rm__dashboard-card_acct--details > :nth-child(1)",
+    "acct_num": ".rm__dashboard-card_acct--details > :nth-child(2)",
+    "bank_name": ".rm__dashboard-card_acct--details > p",
+    "copy_icon": "p > img",
+    "acct_bal": ".rm__dashboard-card_balance--amount",
+    "bal_decimal": ".rm__dashboard-card_balance--decimals",
+
+    "//": "Bills section",
+
+    "add_money_btn": ":nth-child(1) > .rm__quick--action",
+    "send_money_btn": "[icon='assets/reskins/icons/blue-plane.svg'] > .rm__quick--action",
+    "buy_airtime_btn": "[icon='assets/reskins/icons/yellow-phone.svg'] > .rm__quick--action",
+    "pay_bills_btn": "[icon='assets/reskins/icons/green-bulb.svg'] > .rm__quick--action",
+  
+
+    "//": "notification clouds",
+    "tier_upgrade_not": ".rm__dashboard--ad",
+    "expectedLines": [
+        "Remove all account restrictions. ",
+        "Upgrade your account tier"
+      ],
+
+    "//": "Cards section",
+
+    "savings_card_1": "[title='Start Saving'] > .rm__dashboard-products > .rm__dashboard-products--item > article > h6",
+    "savings_card_2": "[title='Start Saving'] > .rm__dashboard-products > .rm__dashboard-products--item > article > p",
+    "save_btn_2": ".rm__dashboard-main_products--btn",
+    "loan_card_1": "[icon='assets/reskins/icons/loan-db-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > h6",
+    "loan_card_2": "[icon='assets/reskins/icons/loan-db-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > p",
+    "apply_btn": "[icon='assets/reskins/icons/bills-dsb-icon.svg'] > .rm__dashboard-products",
+    "bills_card_1": "[icon='assets/reskins/icons/bills-dsb-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > h6",
+    "bills_card_2": "[icon='assets/reskins/icons/bills-dsb-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > p",
+    "debit_card_1": "[icon='assets/reskins/icons/debitcards-db-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > h6",
+    "debit_card_2": "[icon='assets/reskins/icons/debitcards-db-icon.svg'] > .rm__dashboard-products > .rm__dashboard-products--item > article > p",
+
+    "//": "Chat icon",
+
+    "chat_icon": "#fc_widget"
+
+}

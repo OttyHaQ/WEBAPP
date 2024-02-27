@@ -14,10 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-// import cypress from 'cypress';
+import cypress from 'cypress';
 import './commands'
 import './login.actions'
 import './assertion.actions'
+import './dashboard.actions'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
